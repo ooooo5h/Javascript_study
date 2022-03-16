@@ -39,3 +39,27 @@ console.log(10 < 6); //less than
 console.log(10 <= 6);  // less than or equal
 console.log(10 > 6); // greater than
 console.log(10 >= 6); // greater than or equal
+
+// 6. Logical operators : || (or), && (and), ! (not)
+const value1 = false;
+const value2 = 4 < 2;
+
+// || (or), finds the first truthy value   => 무거운 함수실행프로그램같은 경우 맨 마지막이 좋다
+console.log(`or : ${value1 ||  value2 || check()}`);
+
+// && (and), finds the first falsy value
+console.log(`and : ${value1 && value2 && check()}`);
+
+// often used to compress long if-statement
+// nullableObject && nullableObject.something
+
+function check() {
+    for (let i = 0; i < 10; i++) {
+        //wasting time
+        console.log('메롱')
+    }
+    return true;
+}
+
+// ! (not)
+console.log(!value1) // true가 리턴됨
