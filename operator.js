@@ -63,3 +63,31 @@ function check() {
 
 // ! (not)
 console.log(!value1) // true가 리턴됨
+
+// 7. Equality
+const stringFive = '5';
+const numberFive = 5;
+
+// == loose equality, with type conversion
+console.log(stringFive == numberFive);
+console.log(stringFive != numberFive);
+
+// strict equality, no type conversion
+console.log(stringFive === numberFive);
+console.log(stringFive !== numberFive);
+
+// object equality by reference
+const eunhyung1 = {name : 'eunhyung'};
+const eunhyung2 = {name : 'eunhyung'};
+const eunhyung3 = eunhyung1;
+console.log(eunhyung1 == eunhyung2); // false??? false인 이유 : 오브젝트는 레퍼런스의 형태로 메모리에 탑재된다. 똑같은 값을 가지고 있어도 각각 다른 레퍼런스가 메모리에 들어가있기 때문!!
+console.log(eunhyung1 === eunhyung2); // false
+console.log(eunhyung1 === eunhyung3); // true
+
+// equality - puzzler
+console.log( 0 == false); // true
+console.log(0 === false); // false   => 0는 boolean 타입이 아니기 때문에 false
+console.log('' == false); // true
+console.log('' === false); // false   => ''는 boolean 타입이 아니기 때문에 false
+console.log(null == undefined); // true
+console.log(null === undefined); // false 
