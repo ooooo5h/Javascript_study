@@ -15,3 +15,8 @@ console.log(globalName);
 
 // constants : 변하지 않는 수! immutable data type 
 // - security, thread safety, reduce human mistakes
+
+const count = 17; // integer
+const size = 17.1; // decimal number
+console.log(`value : ${count}, type : ${typeof count}`);
+console.log(`value : ${size}, type : ${typeof size}`);
