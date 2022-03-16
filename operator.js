@@ -91,3 +91,14 @@ console.log('' == false); // true
 console.log('' === false); // false   => ''는 boolean 타입이 아니기 때문에 false
 console.log(null == undefined); // true
 console.log(null === undefined); // false 
+
+// 8. Conditional operators : if
+// if, else if, else
+const name = 'coder1';
+if(name === 'eunhyung') {
+    console.log('welcome, eunhyung!');
+} else if (name === 'coder') {
+    console.log('you are amazing coder');
+} else {
+    console.log('unknown')
+}
