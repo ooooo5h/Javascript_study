@@ -20,3 +20,12 @@ const count = 17; // integer
 const size = 17.1; // decimal number
 console.log(`value : ${count}, type : ${typeof count}`);
 console.log(`value : ${size}, type : ${typeof size}`);
+
+const infinity = 1 / 0 ;   // Infinity
+console.log(infinity);
+
+const negativeInfinity = -1 / 0 ;   // -Infinity
+console.log(negativeInfinity);
+
+const nAn = 'not a number' / 2;    // 숫자가 아닌 수를 2로 나눔 => NaN
+console.log(nAn);
