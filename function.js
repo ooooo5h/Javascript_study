@@ -20,3 +20,14 @@ function log(message) {
 }
 log('은형이가 자바스크립트 공부중');
 log(314);
+
+// 2. Parameters
+// premitive parameters : passed by value
+// object parameters : passed by reference
+function changeName(obj) {
+    obj.name = 'coder';
+}
+
+const eunhyung = {name : 'eunhyung'};
+changeName(eunhyung);
+console.log(eunhyung)
