@@ -25,3 +25,26 @@ const eunhyung = new Person('eunhyung', 32);
 console.log(eunhyung.name);
 console.log(eunhyung.age);
 eunhyung.speak();
+
+// 2. Getter and setters
+class User {
+    constructor (firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    get age() {
+        return this._age;
+    }
+
+    set age(value) {
+        // if (value < 0) {
+        //     throw Error('age can not be negative');
+        // }
+        this._age = value < 0 ? 0 : value;  
+    }
+}
+
+const user1 = new User('eunhyung', 'jeon', -1);
+console.log(user1.age);
