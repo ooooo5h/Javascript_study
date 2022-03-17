@@ -158,3 +158,8 @@ const simplyMultiply = (a,b) => {
     // do something more
     return a + b;
 };
+
+// IIFE : Immediately Invoked Function Expression
+(function hello() {
+    console.log('IIFE');
+})();    // 괄호로 감싸고, 함수호출처럼 괄호()를 해주면 함수가 바로 호출됨 => 최근에는 잘 쓰이진 않는다
