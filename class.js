@@ -107,7 +107,7 @@ class Triangle extends Shape {
     }
     getArea() {
         return (this.width * this.height) / 2;   // 오버라이딩(재정의)해서 함수를 살짝 바꿀 수 있음!
-    }
+    } 
 }
 const rectangle = new Rectangle(20,30,'blue');
 rectangle.draw()
@@ -116,3 +116,11 @@ console.log(rectangle.getArea());
 const triangle = new Triangle(20, 20, 'red');
 triangle.draw();
 console.log(triangle.getArea())
+
+// 6. Class checking : instanceOf
+console.log(rectangle instanceof Rectangle)  // true
+console.log(triangle instanceof Rectangle); // false
+console.log(triangle instanceof Triangle); // true
+console.log(triangle instanceof Shape); // true
+console.log(triangle instanceof Object); // true   자바스크립트에서 만드는 모든 오브젝트 클래스는 오브젝트를 상속한다.
+
