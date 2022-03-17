@@ -24,3 +24,18 @@ console.log(eunhyung.hasJob);
 // can delete properties later
 delete eunhyung.hasJob;
 console.log(eunhyung.hasJob);
+
+// 2. Computed properties
+// key should be always string type
+console.log(eunhyung.name);    // 점으로 접근 가능   -> 바로 그 값을 가지고 오고 싶을 때 사용(주로 .을 사용)
+console.log(eunhyung['name']);  // 배열로 계산해서 접근 가능 -> 정확히 어떤 키가 필요한 지 모를 때 사용
+
+eunhyung['hasJob'] =  false;
+console.log(eunhyung.hasJob);
+
+function printValue(obj, key) {
+    // console.log(obj.key);  undefined > 오브젝트의 키라는 프로펄티가 들어있는 지 모름. 이럴떈 []을 사용해야함
+    console.log(obj[key]);
+}
+
+printValue(eunhyung, 'name');  
