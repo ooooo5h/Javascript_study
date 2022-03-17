@@ -74,3 +74,27 @@ const arr = [1,2,3,4,5];
 for (value of arr) {
     console.log(value);
 }
+
+// 7. fun cloning
+// Object.assign(dest, [obj1, obj2, obj3...])
+const user = { name : 'eh', age : '33'};
+const user2 = user;
+user2.name = 'coder';
+console.log(user);   // name : coder로 출력된다. 왜? user, user2는 다른 레퍼런스를 갖고 있지만, 같은 값을 가리키고 있기때문에 user2의 obj를 바꿔버리면, user도 같은 값을 가리키고 있기 때문에 같이 변경이 됨!
+
+// old way : how to just copy
+const user3 = {};
+for (key in user) {
+    user3[key] = user[key];
+}
+console.log(user3);
+
+const user4 = Object.assign({}, user);
+console.log(user4);
+
+// another example
+const fruit1 = {color : 'red'};
+const fruit2 = {color : 'blue', size : 'big'};
+const mixed = Object.assign({}, fruit1, fruit2);  // 가장 뒤에 있는 아이의 값으로 덮여씌워진다는 점 주의!
+console.log(mixed.color);
+console.log(mixed.size);
