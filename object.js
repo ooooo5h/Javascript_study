@@ -54,3 +54,9 @@ function Person(name, age) {
     this.age = age;
     // return this;
 }
+
+// 5. in operator : property existance check ( key in obj)
+console.log('name' in eunhyung);
+console.log('age' in eunhyung);
+console.log('hasjob' in eunhyung);
+console.log(eunhyung.hasjob);   // undefined
