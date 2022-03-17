@@ -102,3 +102,24 @@ function upgradeUser(user) {
     }
     // long upgrade logic...
 }
+
+// First-class function
+// functions are trated like any other variable
+// can be assigned as a value to variable
+// can be passed as an argument to other functions.
+// can be returned by another function
+
+// 1. Function expression
+// a function declaration can be called earlier than it is defined. (hoisted)
+// a function expression is created when the execution reaches it.
+const print = function() {
+    // anonymous function
+    console.log('print');
+};
+print();
+
+const printAgain = print;
+printAgain();
+
+const sumAgain = sum;
+console.log(sumAgain(1,3));    
