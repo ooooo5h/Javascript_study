@@ -79,3 +79,40 @@ console.log(Article.publisher);
 Article.printPublisher();
 
 console.log(article1.publisher); // undefined. 클래스로만 접근이 가능함
+
+// Inheritance
+// a way for one class to extend another class
+class Shape {
+    constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    draw() {
+        console.log(`drawing ${this.color} color of`);
+    }
+
+    getArea() {
+        return this.width * this.height;
+    }
+}
+
+class Rectangle extends Shape {}
+class Triangle extends Shape {
+    
+    draw () {
+        super.draw()   // 부모 호출은 super 로 사용할 수 있다
+        console.log('red triangle');
+    }
+    getArea() {
+        return (this.width * this.height) / 2;   // 오버라이딩(재정의)해서 함수를 살짝 바꿀 수 있음!
+    }
+}
+const rectangle = new Rectangle(20,30,'blue');
+rectangle.draw()
+console.log(rectangle.getArea());
+
+const triangle = new Triangle(20, 20, 'red');
+triangle.draw();
+console.log(triangle.getArea())
