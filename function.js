@@ -44,3 +44,20 @@ function showMessage2 (message, from = '세상 모든 사람들!') {   // 파라
 }
 
 showMessage2('은형이 파이팅')  
+
+// 4. Rest parameters 
+function printAll(...args) {    // ...args => 파라미터가 배열로 들어온다는 뜻
+    for (let i = 0 ; i < args.length; i++) {
+        console.log(args[i])
+    }
+
+    // 배열 출력방법 2 
+    for (const arg of args) {
+        console.log(arg);
+    }
+
+    // 배열 출력방법 3
+    args.forEach((arg) => console.log(arg));
+} 
+
+printAll('자바스크립트', '파이팅', '은형이')
