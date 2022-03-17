@@ -60,3 +60,17 @@ console.log('name' in eunhyung);
 console.log('age' in eunhyung);
 console.log('hasjob' in eunhyung);
 console.log(eunhyung.hasjob);   // undefined
+
+
+// 6. for .. in vs for.. of
+// for (key in obj)
+console.clear();
+for (key in eunhyung) {
+    console.log(key);
+}
+
+// for (value of iterable)
+const arr = [1,2,3,4,5];
+for (value of arr) {
+    console.log(value);
+}
