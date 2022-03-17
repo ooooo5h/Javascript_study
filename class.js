@@ -59,3 +59,23 @@ class Experiment {
 const experiment = new Experiment()
 console.log(experiment.publicField);
 console.log(experiment.privateField);  // undefined 
+
+// 4. Static properties and methods
+// too soon!
+class Article {
+    static publisher = 'dream coding';  // 클래스만 가지고 있는 고유한 값. 클래스 자체에 연결되어있음!
+    constructor (articleNumber) {
+        this.articleNumber = articleNumber;
+    }
+
+    static printPublisher() {
+        console.log(Article.publisher);
+    }
+}
+
+const article1 = new Article(1);
+const article2 = new Article(2);
+console.log(Article.publisher);
+Article.printPublisher();
+
+console.log(article1.publisher); // undefined. 클래스로만 접근이 가능함
