@@ -86,3 +86,19 @@ function sum(a,b) {
 
 const result = sum(1,2);
 console.log(`sum : ${sum(1,2)}`);
+
+// 7. Early return, early exit 
+// bad case
+function upgradeUser(user) {
+    if (user.point > 10) {
+        // long upgrade logic...
+    }
+}
+
+// good case    => 값이 틀린 경우를 먼저 리턴해서 빨리 함수를 끝내는 게 좋은 코드 작성법이다!
+function upgradeUser(user) {
+    if (user.point <= 10) {
+        return;
+    }
+    // long upgrade logic...
+}
