@@ -50,7 +50,7 @@ console.log(person4);
 // 4. Constructor Function
 function Person(name, age) {
     // this = {} ;
-    this.name = name,
-    this.age = age,
+    this.name = name;
+    this.age = age;
     // return this;
 }
