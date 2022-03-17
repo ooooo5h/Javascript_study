@@ -39,3 +39,18 @@ function printValue(obj, key) {
 }
 
 printValue(eunhyung, 'name');  
+
+// 3. Property value shorthand
+const person1 = { name : 'suga', age : 30};
+const person2 = { name : 'v', age : 28};
+const person3 = { name : 'jhope', age : 29};
+const person4 = new   Person('eunhyung', 32);
+console.log(person4);
+
+// 4. Constructor Function
+function Person(name, age) {
+    // this = {} ;
+    this.name = name,
+    this.age = age,
+    // return this;
+}
