@@ -31,3 +31,16 @@ function changeName(obj) {
 const eunhyung = {name : 'eunhyung'};
 changeName(eunhyung);
 console.log(eunhyung)
+
+// 3. Default parameters
+function showMessage (message, from) {
+    console.log(`${message} by ${from}`);
+}
+
+showMessage('은형이 파이팅')    // 두번째 파라미터값이 안주어진 경우, 기본값인 undefined로 대체된다.
+
+function showMessage2 (message, from = '세상 모든 사람들!') {   // 파라미터에 대입할 때, = 으로 기본값을 설정할 수 있음
+    console.log(`${message} by ${from}`);
+}
+
+showMessage2('은형이 파이팅')  
