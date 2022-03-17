@@ -163,25 +163,26 @@ const simplyMultiply = (a,b) => {
 (function hello() {
     console.log('IIFE');
 })();    // 괄호로 감싸고, 함수호출처럼 괄호()를 해주면 함수가 바로 호출됨 => 최근에는 잘 쓰이진 않는다
-
+ 
 // quiz time
 // function calculate(command, a, b)
 // command : add, substract, divide, multiply, remainder
 
 function calculate(command, a, b) {
-    if (command === 'add') {
-        return a + b;
-    } else if (command === 'substract') {
-        return a - b;
-    } else if (command === 'divide') {
-        return a / b;
-    } else if (command === 'multiply') {
-        return a * b;
-    } else if (command === 'remainder') {
-        return a % b;
-    } else {
-        return '없는 연산자입니다.'
-    }
-}
+    switch (command) {
+        case 'add' :
+            return a + b;
+        case 'substract' :
+            return a - b;
+        case 'divide' :
+            return a / b;
+        case 'multiply' :
+            return a * b;
+        case 'ramainder' :
+            return a % b;
+        default :
+            throw Error('unknown command')
 
+    }
+}  
 console.log(calculate('dd', 8, 4));
