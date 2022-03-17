@@ -61,3 +61,22 @@ function printAll(...args) {    // ...args => 파라미터가 배열로 들어�
 } 
 
 printAll('자바스크립트', '파이팅', '은형이')
+
+// 5. Local scope
+let globalMessage = 'global'; // 전역변수
+
+function printMessage() {
+    let message  = 'hello';  // 지역변수
+    console.log(message);    
+    console.log(globalMessage);  // 내부에서는 밖을 볼 수 있다.
+
+    function printAnother() {
+        console.log(message);   // 내부에서는 밖을 볼 수 있다.
+        let childMessage = "hello";
+    }
+    
+    console.log(childMessage);  // 밖에서는 안을 볼 수 없다.
+}
+
+printMessage()
+// console.log(message);  // 밖에서는 안을 볼 수 없다.
