@@ -123,3 +123,26 @@ printAgain();
 
 const sumAgain = sum;
 console.log(sumAgain(1,3));    
+
+// 2. Callback function using function expression
+function randomQuiz(answer, printYes, printNo) {   // 함수의 파라미터로 함수를 전달.
+    if (answer === 'love you') {
+        printYes();
+    } else {
+        printNo();
+    }
+}
+
+// anonymous function
+const printYes = function() {
+    console.log('yes!');
+};
+
+// named function
+// better debugging in debugger's stack traces
+// recursions
+const printNo = function print() {
+    console.log('no!');
+};
+
+randomQuiz('wrong', printYes, printNo);
