@@ -74,9 +74,15 @@ function printMessage() {
         console.log(message);   // 내부에서는 밖을 볼 수 있다.
         let childMessage = "hello";
     }
-    
-    console.log(childMessage);  // 밖에서는 안을 볼 수 없다.
+    // console.log(childMessage);  // 밖에서는 안을 볼 수 없다.
 }
-
 printMessage()
 // console.log(message);  // 밖에서는 안을 볼 수 없다.
+
+// 6. Return a value
+function sum(a,b) {
+    return a + b;
+}
+
+const result = sum(1,2);
+console.log(`sum : ${sum(1,2)}`);
