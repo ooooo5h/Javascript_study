@@ -146,3 +146,15 @@ const printNo = function print() {
 };
 
 randomQuiz('wrong', printYes, printNo);
+
+// Arrow function
+// always anonymous
+const simplePrint1 = function() {
+    console.log('simplePrint!');
+};
+const simplePrint = () => console.log('simplePrint!');
+const add = (a,b) => a + b;
+const simplyMultiply = (a,b) => {
+    // do something more
+    return a + b;
+};
