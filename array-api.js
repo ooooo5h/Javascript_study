@@ -89,6 +89,9 @@ class Student {
   
   // Q8. check if there is a student with the score lower than 50
   {
+      console.clear();
+      const result = students.some((student) => student.score < 50);
+      console.log(result);
   }
   
   // Q9. compute students' average score
