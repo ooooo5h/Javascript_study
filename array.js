@@ -71,3 +71,22 @@ console.log(fruits);
 const fruits2 = ['레몬', '배'];
 const newFruits = fruits.concat(fruits2);
 console.log(newFruits)
+
+// 5. Searching
+// indexOf: find the index
+console.clear();
+console.log(fruits);
+console.log(fruits.indexOf('토마토'));
+console.log(fruits.indexOf('한라봉')) // 없으면 -1을 리턴 
+
+// includes
+console.log(fruits.includes('낑깡'))   // false
+console.log(fruits.includes('수박'));
+
+// lastIndexOf
+console.clear();
+console.log(fruits);
+fruits.push('참외');
+console.log(fruits);
+console.log(fruits.indexOf('참외'))   // 맨 첫번쨰 인덱스를 리턴
+console.log(fruits.lastIndexOf('참외'))  // 맨 마지막 인덱스를 리턴 
