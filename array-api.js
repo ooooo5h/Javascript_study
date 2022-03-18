@@ -99,6 +99,10 @@ class Student {
   
   // Q9. compute students' average score
   {
+      console.clear()
+      const result = students.reduce((prev, curr) =>  prev + curr.score, 0);
+      console.log(result / students.length);
+      
   }
   
   // Q10. make a string containing all the scores
