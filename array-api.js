@@ -76,6 +76,8 @@ class Student {
   
   // Q6. make an array of enrolled students
   {
+      const result = students.filter((student) => student.enrolled);
+      console.log(result);
   }
   
   // Q7. make an array containing only the students' scores
