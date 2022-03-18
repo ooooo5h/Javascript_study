@@ -83,6 +83,8 @@ class Student {
   // Q7. make an array containing only the students' scores
   // result should be: [45, 80, 90, 66, 88]
   {
+      const result = students.map(student => student.score);
+      console.log(result)
   }
   
   // Q8. check if there is a student with the score lower than 50
