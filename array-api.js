@@ -110,7 +110,7 @@ class Student {
   {
       const result = students
       .map(student => student.score)
-      .filter(score => score >= 80)
+    //   .filter(score => score >= 80)
       .join();
       console.log(result)
   }
@@ -118,4 +118,9 @@ class Student {
   // Bonus! do Q10 sorted in ascending order
   // result should be: '45, 66, 80, 88, 90'
   {
+      const result = students
+        .map(student => student.score)
+        .sort((a,b) => a-b)
+        .join();
+      console.log(result)
   }
