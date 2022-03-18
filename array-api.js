@@ -92,6 +92,9 @@ class Student {
       console.clear();
       const result = students.some((student) => student.score < 50);
       console.log(result);
+
+      const result2 = !students.every((student) => student.score >= 50);
+      console.log(result2);
   }
   
   // Q9. compute students' average score
