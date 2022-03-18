@@ -13,11 +13,18 @@
 
 // Q2. make an array out of a string
 // 아 어렵다 이거 fruits는 array가 아닌데..!?
+// 주어진 스트링을 배열로 전환하라는 문제였다.
 {
 const fruits = '🍎, 🥝, 🍌, 🍒';
 
-fruits = new Array(fruits)
-console.log(fruits)
+// fruits = new Array(fruits)
+// console.log(fruits)
+const result = fruits.split(',')  // 구분자는 꼭 넣어주는 게 좋다! 어떤걸로 나눌건지
+console.log(result);
+
+const result2 = fruits.split()
+console.log(result2);
+
 }
 
 // Q3. make this array look like this: [5, 4, 3, 2, 1]x
