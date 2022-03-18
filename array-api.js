@@ -43,8 +43,12 @@ console.log(array);     // reverse는 원래의 데이터도 변형시킨다는 
 {
 const array = [1, 2, 3, 4, 5];
 
-array.splice(0, 2);
-console.log(array);
+// const result = array.splice(0, 2);
+// console.log(result);     // splice는 배열 자체를 수정함으로 정답 아님.
+
+const result2 = array.slice(2, 5);  // slice는 마지막 숫자는 배제하니까 5까지로 해야 끝나지 나옴.
+console.log(result2);
+console.log(array)    // 원래 array는 변화 없음.
 }
 
 
