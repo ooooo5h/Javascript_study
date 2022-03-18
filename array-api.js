@@ -100,7 +100,7 @@ class Student {
   // Q9. compute students' average score
   {
       console.clear()
-      const result = students.reduce((prev, curr) =>  prev + curr.score, 0);
+      const result = students.reduceRight((prev, curr) =>  prev + curr.score, 0);
       console.log(result / students.length);
       
   }
