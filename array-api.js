@@ -120,7 +120,7 @@ class Student {
   {
       const result = students
         .map(student => student.score)
-        .sort((a,b) => a-b)
+        .sort((a,b) => b-a)
         .join();
       console.log(result)
   }
