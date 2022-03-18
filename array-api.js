@@ -27,11 +27,16 @@ console.log(result2);
 
 }
 
-// Q3. make this array look like this: [5, 4, 3, 2, 1]x
+// Q3. make this array look like this: [5, 4, 3, 2, 1]
 {
 const array = [1, 2, 3, 4, 5];
-array.sort().reverse()
-console.log(array)
+// array.sort().reverse()     sort는 왜했니 할 필요가 없는데
+// console.log(array)
+
+const result = array.reverse();
+console.log(result);
+
+console.log(array);     // reverse는 원래의 데이터도 변형시킨다는 점 유의!
 }
 
 // Q4. make new array without the first two elements
