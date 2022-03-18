@@ -108,7 +108,10 @@ class Student {
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
-      const result = students.map(student => student.score).join();
+      const result = students
+      .map(student => student.score)
+      .filter(score => score >= 80)
+      .join();
       console.log(result)
   }
   
