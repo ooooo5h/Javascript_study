@@ -1,10 +1,14 @@
 // Q1. make a string out of an array
+// 문제 : 배열에서 꺼내서 문자열로 만들어라
 {
     const fruits = ['apple', 'banana', 'orange'];
 
-    fruits.forEach(fruit => {
-        console.log(fruit)
-    }) 
+    // fruits.forEach(fruit => {
+    //     console.log(fruit)
+    // }) 
+
+    const result = fruits.join(', and')    // 괄호안에는 구분자를 넣어주면 됨
+    console.log(result);
 }
 
 // Q2. make an array out of a string
@@ -12,12 +16,11 @@
 {
 const fruits = '🍎, 🥝, 🍌, 🍒';
 
-for (let icon of fruits) {
-    console.log(icon)
-}
+fruits = new Array(fruits)
+console.log(fruits)
 }
 
-// Q3. make this array look like this: [5, 4, 3, 2, 1]
+// Q3. make this array look like this: [5, 4, 3, 2, 1]x
 {
 const array = [1, 2, 3, 4, 5];
 array.sort().reverse()
