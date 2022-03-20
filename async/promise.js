@@ -49,7 +49,7 @@ const getHen = () =>
     });
 const getEgg = hen => 
     new Promise((resolve, reject) => {
-        setTimeout(() => (`${hen} => 달걀`), 1000);
+        setTimeout(() => reject(new Error(`error! ${hen} => 달걀`)), 1000);
     });
 const cook = egg =>
     new Promise((resolve, reject) => {
