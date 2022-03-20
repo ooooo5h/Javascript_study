@@ -63,4 +63,5 @@ const cook = egg =>
 getHen() //
 .then(getEgg)
 .then(cook)
-.then(console.log);    
+.then(console.log)
+.catch(console.log);
