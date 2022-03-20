@@ -43,7 +43,7 @@ fetchNumber
 .then(num => console.log(num));  //5 
 
 // 4. Error Handling
-const getHen = () =>
+const getHen = () => 
     new Promise((resolve, reject) => {
         setTimeout(()=> resolve('닭'), 1000);
     });
