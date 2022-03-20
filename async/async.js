@@ -22,7 +22,7 @@
  }
 
  async function getBanana() {   // delay가 끝날때까지 기다려. 기다렸다가 바나나를 리턴하는 코드
-     await delay(3000);
+     await delay(2000);
      return '바나나';
  }
 
@@ -35,3 +35,14 @@
  }
 
  pickFruits().then(console.log);
+
+ // 3. useful Promise APIs
+ function pickAllFruits() {
+     return Promise.all([getApple(), getBanana()]).then(fruits => fruits.join(' + '));
+ }
+ pickAllFruits().then(console.log);
+
+ function pickOnlyOne() {
+     return Promise.race([getApple(), getBanana()]);
+ }
+ pickOnlyOne().then(console.log);
