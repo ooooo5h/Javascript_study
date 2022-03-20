@@ -41,3 +41,26 @@ fetchNumber
     });
 })
 .then(num => console.log(num));  //5 
+
+// 4. Error Handling
+const getHen = () =>
+    new Promise((resolve, reject) => {
+        setTimeout(()=> resolve('닭'), 1000);
+    });
+const getEgg = hen => 
+    new Promise((resolve, reject) => {
+        setTimeout(() => (`${hen} => 달걀`), 1000);
+    });
+const cook = egg =>
+    new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${egg} => 계란후라이`), 1000);
+    });
+
+// getHen()
+// .then(hen => getEgg(hen))
+// .then(egg => cook(egg))
+// .then(meal => console.log(meal));     아래와 같이 코드를 줄일 수 있음
+getHen() //
+.then(getEgg)
+.then(cook)
+.then(console.log);    
