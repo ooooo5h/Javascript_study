@@ -62,6 +62,9 @@ const cook = egg =>
 // .then(meal => console.log(meal));     아래와 같이 코드를 줄일 수 있음
 getHen() //
 .then(getEgg)
+.catch(error => {
+    return '빵';
+})
 .then(cook)
 .then(console.log)
 .catch(console.log);
