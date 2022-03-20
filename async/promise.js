@@ -10,8 +10,8 @@ const promise = new Promise((resolve, reject) => {
     // doing some heavy work (network, read files)
     console.log('doing something...')
     setTimeout(()=> {
-        // resolve('eunhyung');
-        reject(new Error('no network'));
+        resolve('eunhyung');
+        // reject(new Error('no network'));
     }, 2000);
 })
 
@@ -23,4 +23,6 @@ promise
     .catch(error => {
         console.log(error);
     })
+    .finally(()=> {console.log('finally')
+    }); // 무조건 마지막에 실행되는 아이
 
