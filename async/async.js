@@ -18,6 +18,7 @@
 
  async function getApple() {
      await delay(3000);
+     throw 'error';
      return '사과';
  }
 
@@ -27,7 +28,7 @@
  }
 
  async function pickFruits() {
-     const apple = await getApple();
+     const apple = await getApple();  // 에러에 대한 코드가 없기 때문에 콘솔에서 에러가 발생함 Uncaught (in promise) error
      const banana = await getBanana();
      return `${apple} + ${banana}`;
  }
