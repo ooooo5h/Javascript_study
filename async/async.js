@@ -26,10 +26,10 @@
      return '바나나';
  }
 
- function pickFruits() {
-     return getApple().then(apple => {
-         return getBanana().then(banana =>  `${apple} + ${banana}`);
-     });
+ async function pickFruits() {
+     const apple = await getApple();
+     const banana = await getBanana();
+     return `${apple} + ${banana}`;
  }
 
  pickFruits().then(console.log);
