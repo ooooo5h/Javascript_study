@@ -7,3 +7,5 @@ if (num) {
 } else {
     console.log('false!')
 }
+
+num && console.log(num)   // num이 false이기 때문에 뒤에 문장 자체가 실행이 안됨
