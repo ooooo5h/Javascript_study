@@ -3,19 +3,24 @@ class Counter {
         this.counter = 0;
     }
 
-    increase() {
+    increase(runIf5Times) {
         this.counter++;
         console.log(this.counter);
         if (this.counter % 5 === 0) {
-            console.log('yo')
+            runIf5Times()
         }
     }
 }
 
 const coolCounter = new Counter();
-coolCounter.increase();
-coolCounter.increase();
-coolCounter.increase();
-coolCounter.increase();
-coolCounter.increase();
-coolCounter.increase();
+
+function printSomething() {
+    console.log('yo!');
+}
+
+coolCounter.increase(printSomething);
+coolCounter.increase(printSomething);
+coolCounter.increase(printSomething);
+coolCounter.increase(printSomething);
+coolCounter.increase(printSomething);
+coolCounter.increase(printSomething);
