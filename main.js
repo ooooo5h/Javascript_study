@@ -14,13 +14,17 @@ class Counter {
 
 const coolCounter = new Counter();
 
+function alertNum(num) {
+    alert(`wow! ${num}`);
+}
+
 function printSomething(num) {
-    console.log(`yo! ${num}`);
+    console.log(`wow! ${num}`);
 }
 
 coolCounter.increase(printSomething);
 coolCounter.increase(printSomething);
 coolCounter.increase(printSomething);
 coolCounter.increase(printSomething);
-coolCounter.increase(printSomething);
+coolCounter.increase(alertNum);
 coolCounter.increase(printSomething);
