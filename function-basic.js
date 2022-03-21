@@ -1,8 +1,8 @@
 'use strict';
 
 // 함수 선언
-function doSomething() {
-    console.log('hello');
+function doSomething(add) {
+    console.log(add);
 }
 
 function add(a,b) {
@@ -11,7 +11,5 @@ function add(a,b) {
 }
 
 // 함수 호출
-doSomething();
+doSomething(add);
 
-const result = add(1,2);
-console.log(result);
