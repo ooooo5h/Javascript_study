@@ -7,15 +7,15 @@ class Counter {
         this.counter++;
         console.log(this.counter);
         if (this.counter % 5 === 0) {
-            runIf5Times()
+            runIf5Times(this.counter)
         }
     }
 }
 
 const coolCounter = new Counter();
 
-function printSomething() {
-    console.log('yo!');
+function printSomething(num) {
+    console.log(`yo! ${num}`);
 }
 
 coolCounter.increase(printSomething);
